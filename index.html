@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript dom </title>
+    <link rel="stylesheet" href="styles.css">
+    
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="page-banner">
+                <h1 class="title">Bookmarks</h1>
+                <p>BOOK FOR NINJAS</p>
+
+                <a href="http://www.thenetninja.co.uk">Click here</a>
+                <form id="search-books">
+                    <input type="text" placeholder="search books .." class="sea">
+
+                </form>
+                
+            </div>
+        </header>
+        <div id="book-list">
+            <h2 class="title">Books to read</h2>
+            <ul>
+                <li>
+                    <span class="name">Name of wind</span>
+                    <span class="delete">Delete</span>
+ 
+                </li>
+
+                         <li>
+                    <span class="name">Books of javascrip</span>
+                    <span class="delete">Delete</span>
+ 
+                </li>
+
+                         <li>
+                    <span class="name">Imange of tailor</span>
+                    <span class="delete">Delete</span>
+ 
+                </li>
+
+                      <li>
+                    <span class="name">Transistors</span>
+                    <span class="delete">Delete</span>
+ 
+                </li>
+            </ul>
+        </div>
+
+        <form id="add-book">
+            <input type="checkbox" id="hide">
+            <label for="hide">Hide all</label>
+            <input type="text"placeholder="add a book">
+            <button>Add</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

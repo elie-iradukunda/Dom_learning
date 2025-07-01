@@ -1,0 +1,111 @@
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+        color: #333;
+    }
+
+    #wrapper {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .title {
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    #page-banner p {
+        color: #7f8c8d;
+    }
+
+    #search-books input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #book-list {
+        margin-bottom: 30px;
+    }
+
+    #book-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #book-list li {
+        background: #ecf0f1;
+        margin: 10px 0;
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+    }
+
+    #book-list li:hover {
+        background: #d0e4f5;
+    }
+
+    .delete {
+        color: #e74c3c;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .delete:hover {
+        text-decoration: underline;
+    }
+
+    #add-book {
+        display: flex;
+        gap: 10px;
+    }
+
+    #add-book input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #add-book button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #3498db;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #add-book button:hover {
+        background-color: #2980b9;
+    }
+
+
+    #add-book #hide{
+        width: 40px;
+    }
+    #add-book label{
+        line-height: 54px;
+    }
