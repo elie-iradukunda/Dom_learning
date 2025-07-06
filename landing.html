@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Document</title>
+  <style>
+    .divs{
+        width: 190px;
+        background-color: red;
+        height: 190px;
+        font-family: 'Courier New';
+        font-size: 20px;
+        text-align: center;
+        margin: 60px;
+        padding: 80px;
+        color: white;
+        
+    }
+  </style>
 </head>
 <body>
   <div class="page1">
@@ -20,6 +34,19 @@
     <div class="search">
       <input type="text" id="search" placeholder="search here item" oninput="searching()" />
     </div>
+
+    <div class="colorchanger">
+        <input type="text"  id="color" placeholder="type color to display" >
+        <button id="change">change</button>
+    </div>
+
+
+    <div class="divs">
+<h1>COLOR CHANGER</h1>
+    </div>
+    <BUtton id="bt">Blue</BUtton>
+    <BUtton id="bt">black</BUtton>
+    
   </div>
 
   <script>
@@ -56,6 +83,28 @@
         }
       });
     }
+
+
+const box   = document.querySelector('.divs');
+  const btn   = document.getElementById('change');
+  const input = document.getElementById('color');
+
+  btn.addEventListener('click', () => {
+    const color = input.value.trim().toLowerCase();
+
+    if (color === '') {          
+      box.style.backgroundColor = '';
+      return;
+    }
+
+    const probe = document.createElement('div'); 
+    probe.style.color = color;
+    if (probe.style.color) {
+      box.style.backgroundColor = color;         
+    } else {
+      alert('Not a valid CSS color.');
+    }
+  });
   </script>
 </body>
 </html>
