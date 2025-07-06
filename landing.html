@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
 </head>
-
 <body>
-    <div>
-        <p id="message">JAVASCRIPT</p>
-        <script>
-            let message=document.getElementById('message');
-            console.log(message)
-        </script>
-</body>
+  <div class="page1">
+    <ul id="myul">
+      <li>Home</li>
+      <li>About</li>
+    </ul>
 
+    <div class="tasks">
+      <input type="text" id="myinput" placeholder="add tasks" />
+      <button onclick="addtask()">ADD</button>
+    </div>
+
+    <div class="search">
+      <input type="text" id="search" placeholder="search here item" oninput="searching()" />
+    </div>
+  </div>
+
+  <script>
+    function addtask() {
+      const listitem = document.getElementById("myul");
+      const inputvalue = document.getElementById("myinput").value;
+
+      if (inputvalue === "") {
+        alert("please type something");
+        return;
+      }
+
+      const lists = document.createElement("li");
+      const textNode = document.createTextNode(inputvalue);
+
+      lists.appendChild(textNode);
+      listitem.appendChild(lists);
+      document.getElementById("myinput").value = "";
+      
+    }
+
+    function searching() {
+      const listItems = document.querySelectorAll("#myul li");
+      const searchInput = document.getElementById("search").value.toLowerCase();
+
+      listItems.forEach((item) => {
+        if(searchInput===""){
+            item.style.backgroundColor = "none";
+        }
+        else if(item.textContent.toLowerCase().includes(searchInput)) {
+          item.style.display="block"
+        } else {
+          item.style.display="none"
+        }
+      });
+    }
+  </script>
+</body>
 </html>
