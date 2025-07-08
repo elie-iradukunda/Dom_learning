@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good landing page with only html and css</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+
+        .navbar{
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            width: 100%;
+            top: 0;
+            background-color: rgb(176, 238, 208);
+         
+            
+        }
+        .navs{
+            display: flex;
+            align-items: center;
+        }
+        .navs ul{
+            display: flex;
+            
+        }
+        .navs ul a{
+            margin-right: 50px;
+            list-style: none;
+            color:darkviolet;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            transition: 0.4s ease;
+        }
+
+        .navs ul a:hover{
+background-color: dodgerblue;
+border-radius: 5px;
+transition: 0.4s ease;
+color: white;
+        }
+        #search{
+            margin-right: 50px;
+            color: black;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px;
+          
+        }
+
+#btn{
+    margin-right: 40px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+       border-radius: 20px;
+       cursor: pointer;
+       border: none;
+       transition: 0.4s ease;
+
+}
+#btn:hover{
+    background-color: blueviolet;
+    border: none;
+    transition: 0.4s ease;
+}
+.logo{
+    color: black;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#about{
+margin-top: 3cm;
+}
+
+#main{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.part2{
+    background-color: rgb(203, 178, 229);
+    box-sizing: border-box;
+    margin-top: 2cm;
+    border-radius: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.part2 img{
+    height: 50vh;
+}
+.about p{
+    font-size: 20px;
+    color: rgb(33, 2, 63);
+}
+
+   #form1 {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  
+  font-family: Arial, sans-serif;
+}
+.inputs label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+      
+.inputs input,
+.inputs select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  
+}
+
+.inputs input:focus,
+.inputs select:focus {
+  border-color: #007BFF;
+}
+
+.inputs input[type="date"] {
+  cursor: pointer;
+}
+.inputs{
+  
+    
+    display: flex;
+  flex-direction: column;
+}
+
+.footers1{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.footers1 ul {
+    display: flex;
+}
+.footers1 ul a{
+    text-decoration: none;
+    
+    margin-right: 50px;
+    list-style: none;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+         <div class="logo">ELIE</div>
+        <div class="navs">
+           
+            <ul>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="#"><li>Privacy</li></a>
+            </ul>
+
+            <input type="text"  id="search" placeholder="search here..." autocomplete="off">
+            <button id="btn">SIGN IN</button>
+            <button id="btn">SIGN UP</button>
+        </div>
+        
+    </div>
+
+    <div id="main">
+        <div id="about">
+           <h1>WE are landing page here we develop peaople skills</h1>
+            
+            <p>Lorem ipsum dolor sit amet, <br>
+                 consectetur adipisicing elit. Iure sit,  <br>
+                 molestiae illo ratione vero,  <br>
+                 sunt quia quaerat maiores eius veniam totam,  <br>
+                 quod reiciendis vitae ut tempora sapiente beatae odit aperiam?</p>
+        </div>
+
+        <div class="part2">
+            <img src="./image/raise.avif" alt="image2">
+            <p>Avif project is here to hire new users</p>
+        </div>
+    </div>
+
+    <div class="last">
+        <div class="forms">
+            <form id="form1">
+                <h2>Cretat an account </h2>
+                <div class="inputs">
+                    <label for="fullname">Fullname:</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="fullname" autocomplete="off"> <br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="email" autocomplete="off"> <br>
+                    <label for="password">password:</label>
+                    <input type="password" name="password" id="password" placeholder="password" required> <br>
+                    <label for="dateofbirth">Date of birth</label>
+                    <input type="date" name="dof" id="dof" > <br>
+                    <label for="country">Select your country:</label>
+                    <select name="country" id="country"> <br>
+                        <option value="/">select..</option>
+                          <option value="Rwanda">Rwanda</option>
+                            <option value="burundi">Burundi</option>
+                              <option value="Uganda">Uganda</option>
+                                <option value="tanzaniya">Tanzaniya</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footers">
+        <div class="footers1">
+            <footer>
+                copy@ 2025
+            </footer>
+
+            <ul>
+                <a href="#"><li>Home</li></a>
+                <a href="#about"><li>about</li></a>
+                <a href="#"><li>privacy</li></a>
+                <a href="#"><li>contact</li></a>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

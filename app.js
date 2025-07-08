@@ -131,7 +131,7 @@ link.addEventListener("click",(e)=>{
 const list2=document.querySelector('#book-list ul');
 list2.addEventListener("click",(e)=>{
   if(e.target.className=='delete'){
-    const li=e.target.parentElement
+    const li=e.target.parentNode
     
     // or write list2.removechilde(li)
 
