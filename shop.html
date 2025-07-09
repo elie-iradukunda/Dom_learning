@@ -1,158 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shoping card</title>
-    
-    <style>
-        *{
-            outline: none;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    * {
+      outline: none;
+    }
 
-        .allproducts{
-            display: flex;
+    .allproducts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
+    }
 
-        }
-        .product img{
-width: 300px;
+    .product img {
+      width: 300px;
+    }
 
-        }
+    .tables {
+      margin: 20px;
+      font-family: Arial, sans-serif;
+    }
 
+    .table1 table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
 
+    .table1 th,
+    .table1 td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
 
-        .tables {
-  margin: 20px;
-  font-family: Arial, sans-serif;
-}
+    .table1 thead {
+      background-color: #7c9c7d;
+      color: white;
+    }
 
-.table1 table {
-  width: 100%;
-  border-collapse: collapse;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  border-radius: 8px;
-}
+    .table1 tbody tr:hover {
+      background-color: #0aab93;
+      transition: background-color 0.3s ease;
+    }
 
-.table1 th, .table1 td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
+    .table1 td:last-child button {
+      color: red;
+      cursor: pointer;
+      font-weight: bold;
+      border: none;
+      background: transparent;
+    }
 
-.table1 thead {
-  background-color: #7c9c7d;
-  color: white;
-}
-
-.table1 tbody tr:hover {
-  background-color: #0aab93;
-  transition: background-color 0.3s ease;
-}
-
-.table1 td:last-child {
-  color: red;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.table1 td:last-child:hover {
-  text-decoration: underline;
-}
-
-    </style>
+    .table1 td:last-child button:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div dir="shop">
-        <h1>Store</h1>
-        <p>Products</p>
+  <div dir="shop">
+    <h1>Store</h1>
+    <p>Products</p>
+  </div>
 
-
-    </div>
-<div class="allproducts">
+  <div class="allproducts">
     <div class="product">
-        <p>Gaming console</p>
-        <img src="./image/where.avif" alt="">
-        <h3>200$</h3>
-        <input type="number" id="number1">
-        <button onclick="buy()">Buy</button>
+      <p>Gaming console</p>
+      <img src="./image/where.avif" alt="">
+      <h3>200$</h3>
+      <input type="number" min="1">
+      <button onclick="buy(this)">Buy</button>
     </div>
 
-
-      <div class="product">
-        <p>Mobile console</p>
-        <img src="./image/where.avif" alt="">
-        <h3>150$</h3>
-        <input type="number" id="number2">
-        <button onclick="buy()">Buy</button>
+    <div class="product">
+      <p>Mobile console</p>
+      <img src="./image/where.avif" alt="">
+      <h3>150$</h3>
+      <input type="number" min="1">
+      <button onclick="buy(this)">Buy</button>
     </div>
 
-
-      <div class="product">
-        <p>SmartWatch</p>
-        <img src="./image/where.avif" alt="">
-        <h3>50$</h3>
-        <input type="number" id="number3">
-        <button onclick="buy()">Buy</button>
+    <div class="product">
+      <p>SmartWatch</p>
+      <img src="./image/where.avif" alt="">
+      <h3>50$</h3>
+      <input type="number" min="1">
+      <button onclick="buy(this)">Buy</button>
     </div>
 
-
-      <div class="product">
-        <p>Laptop</p>
-        <img src="./image/where.avif" alt="">
-        <h3>200$</h3>
-        <input type="number" id="numbers">
-        <button onclick="buy()">Buy</button>
+    <div class="product">
+      <p>Laptop</p>
+      <img src="./image/where.avif" alt="">
+      <h3>200$</h3>
+      <input type="number" min="1">
+      <button onclick="buy(this)">Buy</button>
     </div>
+  </div>
 
-
+  <div class="tables">
+    <div class="table1">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Cart items will appear here -->
+        </tbody>
+      </table>
     </div>
+  </div>
 
-    <div class="tables">
-        <div class="table1">
-            <table style="width: 100%; border-collapse: collapse;">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                         <th>product_name</th>
-                          <th>product_quantity</th>
-                           <th>product_price</th>
-                            <th>total</th>
-                             <th>Delete</th>
-                              
-                   </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>1</td>
-                    <td>banana</td>
-                    <td>2</td>
-                    <td>300$</td>
-                    <td>600$</td>
-                    <td>delete</td>
-                    </tr>
+  <script>
+    let id = 1;
 
-                </tbody>
-            </table>
-        </div>
-    </div>
-<script>
-    let id=2;
-function buy(){
-    const products=document.querySelectorAll('.product');
-    products.forEach((product,index)=>{
-        const quantityinputs=document.querySelector('input');
-        const quantity= parseInt(quantityinputs.value);
-        if(quantity > 0){
-            const name=document.querySelector('p').textContent;
-            const pricetext=document.querySelector('h3').textContent;
-             const price = parseFloat(pricetext.replace('$', ''));
-            const total=price * quantity;
+    function buy(button) {
+      const product = button.closest('.product');
+      const name = product.querySelector('p').textContent;
+      const priceText = product.querySelector('h3').textContent;
+      const price = parseFloat(priceText.replace('$', ''));
+      const input = product.querySelector('input');
+      const quantity = parseInt(input.value);
 
+      if (quantity > 0) {
+        const total = price * quantity;
 
-          const tbody = document.querySelector('tbody');
         const tr = document.createElement('tr');
- tr.innerHTML = `
+        tr.innerHTML = `
           <td>${id}</td>
           <td>${name}</td>
           <td>${quantity}</td>
@@ -161,25 +146,15 @@ function buy(){
           <td><button onclick="deleteRow(this)">Delete</button></td>
         `;
 
-            tbody.appendChild(tr)
+        document.querySelector('tbody').appendChild(tr);
+        id++;
+        input.value = '';
+      }
+    }
 
-            id++;
-
-            quantityinputs.value="";
-
-        }
-
-    
-    })
-}
-
-
- function deleteRow(btn) {
-    btn.closest('tr').remove();
-  }
-</script>
-    
- 
-
+    function deleteRow(btn) {
+      btn.closest('tr').remove();
+    }
+  </script>
 </body>
 </html>
