@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano key</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .piano-design{
+            background-color: white;
+            color: black;
+            display: flex;
+            padding: 20px;
+            width: 400px;
+            border: 3px solid black;
+            text-align: center;
+            margin-left: 11cm;
+            margin-top: 7cm;
+            
+        }
+
+        .do{
+            background-color: black;
+            color: white;
+            padding: 20px;
+            margin-right: 20px;
+            width: 20px;
+            height: 100px;
+            border: 3px solid rgb(146, 24, 24);
+            border-radius: 20px;
+        }
+        .le{
+ background-color: black;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            margin-right: 20px;
+            width: 20px;
+            height: 200px;
+            border-radius: 20px;
+        }
+        .mi{
+            background-color: black;
+            color: white;
+            padding: 20px;
+            margin-right: 20px;
+            width: 20px;
+            border-radius: 20px;
+            height: 100px;
+             border: 3px solid rgb(146, 24, 24);
+        }
+        .fa{
+     background-color: black;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            margin-right: 20px;
+            width: 20px;
+            border-radius: 20px;
+            height: 200px;
+        }
+        .so{
+             background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin-right: 20px;
+            width: 20px;
+             border: 3px solid rgb(146, 24, 24);
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="piano-design">
+            <div class="do">RED</div>
+            <div class="le">Blue</div>
+            <div class="mi">Green</div>
+            <div class="fa">yellow</div>
+            <div class="so">White</div>
+        </div>
+    </div>
+
+    <script>
+        let divall=document.querySelector('.piano-design')
+        // divall.style.backgroundColor="white-green"
+
+
+        let dore=document.querySelector('.do');
+        let lemi=document.querySelector('.le');
+         let mifa=document.querySelector('.mi');
+          let faso=document.querySelector('.fa');
+           let sola=document.querySelector('.so');
+
+           dore.addEventListener('click',(e)=>{
+             dore.style.backgroundColor="red"
+                       document.body.style.backgroundColor="red"
+
+
+            
+           })
+             lemi.addEventListener('click',(e)=>{
+                 lemi.style.backgroundColor="blue"
+                  document.body.style.backgroundColor="blue"
+         
+            
+           })
+             faso.addEventListener('click',(e)=>{
+                 faso.style.backgroundColor="green"
+                  document.body.style.backgroundColor="green"
+           
+            
+           })
+             sola.addEventListener('click',(e)=>{
+                sola.style.backgroundColor="yellow"
+                 document.body.style.backgroundColor="yellow"
+        
+            
+           })
+             mifa.addEventListener('click',(e)=>{
+                 mifa.style.backgroundColor="gray"
+                  document.body.style.backgroundColor="gray"
+          
+            
+           })
+
+
+    </script>
+</body>
+</html>
