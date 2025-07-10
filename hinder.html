@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password hide</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .hiding{
+            background-color: black;
+            transition: 0.4s ease-in-out;
+            color: aliceblue;
+            font-size: 29px;
+
+        }
+        body{
+            background-color: cadetblue;
+            transition: 0.9s ease-in-out;
+        }
+       input{
+            background-color: red;
+        }
+        button{
+            width: 200px;
+            
+            padding: 2rem;
+            border: none;
+            border-radius: 20px;
+            background-color: darkolivegreen;
+            color: white;
+            font-size: 30px;
+            position: fixed;
+
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div class="alldiv">
+        <div class="inpu">
+            <input type="password" id="password" value="" >
+           
+            <h1>Hello javascript this is javascript courses</h1>
+            <p class="hiding">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.  <br>
+                Hic laboriosam pariatur in provident nisi rerum quis temporibus  <br>
+                aspernatur id ratione voluptatum, sunt quas doloremque <br>
+                 voluptatem ipsam, porro reprehenderit nulla suscipit!
+            </p>
+        </div>
+         <button id="hide">hide</button>
+    </div>
+
+    <script>
+    
+        let para=document.querySelector('.hiding')
+       let btn=document.getElementById('hide').addEventListener('click',()=>{
+
+if(document.body.classList.contains('hiding')){
+   let btn1=document.getElementById('hide')
+   btn1.textContent="hiden"
+    document.body.classList.remove('hiding')
+    para.style.display="none"
+   
+    
+    
+}
+else{
+    document.body.classList.add('hiding')
+       para.style.display="block"
+       btn1.style.color="red"
+    
+    
+    
+}
+       })
+    
+
+
+        
+    </script>
+</body>
+</html>
