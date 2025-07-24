@@ -125,11 +125,12 @@
     </div>
 
     <script>
-        let id = 1;
+        let id = 5;
 
         function buy(button) {
             const product = button.closest('.product');
             const name = product.querySelector('p').textContent;
+            console.log(name)
             const priceText = product.querySelector('h3').textContent;
             const price = parseFloat(priceText.replace('$', ''));
             const input = product.querySelector('input');

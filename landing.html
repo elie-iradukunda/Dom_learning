@@ -49,6 +49,12 @@
     
   </div>
 
+
+  <div id="events">
+    <input type="text" name="text" id="text" onchange="handlechange()">
+    <p id="para">kbx</p>
+  </div>
+
   <script>
     function addtask() {
       const listitem = document.getElementById("myul");
@@ -105,6 +111,18 @@ const box   = document.querySelector('.divs');
       alert('Not a valid CSS color.');
     }
   });
+
+
+function handlechange(){
+
+
+let inpt=document.getElementById('text').value;
+  let para=document.getElementById('para');
+  para.textContent=inpt;
+}
+ 
+ 
+
   </script>
 </body>
 </html>
